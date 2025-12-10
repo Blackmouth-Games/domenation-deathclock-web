@@ -1,4 +1,4 @@
-export type Language = 'es' | 'en' | 'fr' | 'zh' | 'hi';
+export type Language = 'es' | 'en' | 'fr' | 'zh' | 'hi' | 'ja' | 'ko' | 'pt';
 
 export const languages: { code: Language; name: string; flag: string }[] = [
   { code: 'es', name: 'Español', flag: '🇪🇸' },
@@ -6,6 +6,9 @@ export const languages: { code: Language; name: string; flag: string }[] = [
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
   { code: 'zh', name: '简体中文', flag: '🇨🇳' },
   { code: 'hi', name: 'हिंदी', flag: '🇮🇳' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'ko', name: '한국어', flag: '🇰🇷' },
+  { code: 'pt', name: 'Português', flag: '🇧🇷' },
 ];
 
 export const translations: Record<Language, Record<string, string>> = {
@@ -193,5 +196,116 @@ export const translations: Record<Language, Record<string, string>> = {
     'footer.developer': 'द्वारा विकसित',
     'footer.rights': '© 2024 Blackmouth Games. सर्वाधिकार सुरक्षित।',
     'footer.followUs': 'हमें फॉलो करें',
+  },
+  ja: {
+    // Navigation
+    'nav.game': 'ゲーム',
+    'nav.features': '特徴',
+    'nav.about': '私たちについて',
+    
+    // Hero
+    'hero.title': 'DOMENATION',
+    'hero.subtitle': 'DEATHCLOCK',
+    'hero.tagline': '戦い、略奪し、パルスを生き延びろ',
+    'hero.description': '気をつけろ！パルスが来る！できるだけ多くの戦利品を手に入れ、パルスが襲う前に最寄りのドームに避難しろ。邪魔する者とは戦え。',
+    'hero.cta': '今すぐ登録',
+    'hero.comingSoon': '近日公開',
+    
+    // Features
+    'features.title': '主な特徴',
+    'features.subtitle': 'この新しいシューターコンセプトを制覇する準備はできていますか？',
+    'features.description': '一人で戦うか、戦場でチームに参加するか。あなたのスキルと戦略がDomenationで栄光を勝ち取る鍵となります。',
+    
+    'features.domes.title': 'ドーム',
+    'features.domes.description': 'ドームを見つけ、その中でパルスから身を守れ',
+    
+    'features.loot.title': '戦利品キャンプ',
+    'features.loot.description': '宝箱を守る敵クリーチャーを倒して貴重な戦利品を手に入れろ',
+    
+    'features.competition.title': '競争',
+    'features.competition.description': '他のプレイヤーと競い合い、栄光を勝ち取り、限定報酬を獲得せよ',
+    
+    // About
+    'about.title': 'ゲームについて',
+    'about.description': '気をつけろ！パルスが来る！できるだけ多くの戦利品を手に入れ、パルスが襲う前に最寄りのドームに避難しろ。世界中の戦士たちが勝利を手に入れ、ドームゲームの報酬を獲得するためにやってきた。',
+    
+    // Footer
+    'footer.developer': '開発',
+    'footer.rights': '© 2024 Blackmouth Games. All rights reserved.',
+    'footer.followUs': 'フォローする',
+  },
+  ko: {
+    // Navigation
+    'nav.game': '게임',
+    'nav.features': '특징',
+    'nav.about': '소개',
+    
+    // Hero
+    'hero.title': 'DOMENATION',
+    'hero.subtitle': 'DEATHCLOCK',
+    'hero.tagline': '싸우고, 약탈하고, 펄스에서 살아남아라',
+    'hero.description': '조심해! 펄스가 온다! 최대한 많은 전리품을 챙기고 펄스가 닥치기 전에 가장 가까운 돔으로 대피하라. 방해하는 자는 모두 쓰러뜨려라.',
+    'hero.cta': '지금 등록',
+    'hero.comingSoon': '출시 예정',
+    
+    // Features
+    'features.title': '주요 특징',
+    'features.subtitle': '이 새로운 슈터 컨셉을 지배할 준비가 되셨나요?',
+    'features.description': '혼자 싸우거나 전장에서 팀에 합류하세요. 당신의 실력과 전략이 Domenation에서 영광을 얻는 데 결정적일 것입니다.',
+    
+    'features.domes.title': '돔',
+    'features.domes.description': '돔을 찾아 그 안에서 펄스를 피하세요',
+    
+    'features.loot.title': '전리품 캠프',
+    'features.loot.description': '상자를 지키는 적대적인 생명체를 처치하여 귀중한 전리품을 획득하세요',
+    
+    'features.competition.title': '경쟁',
+    'features.competition.description': '다른 플레이어와 경쟁하여 영광을 얻고 독점 보상을 획득하세요',
+    
+    // About
+    'about.title': '게임 소개',
+    'about.description': '조심해! 펄스가 온다! 최대한 많은 전리품을 챙기고 펄스가 닥치기 전에 가장 가까운 돔으로 대피하라. 전 세계의 전사들이 승리를 차지하고 돔 게임의 보상을 얻기 위해 모여들었다.',
+    
+    // Footer
+    'footer.developer': '개발사',
+    'footer.rights': '© 2024 Blackmouth Games. All rights reserved.',
+    'footer.followUs': '팔로우',
+  },
+  pt: {
+    // Navigation
+    'nav.game': 'O JOGO',
+    'nav.features': 'CARACTERÍSTICAS',
+    'nav.about': 'SOBRE NÓS',
+    
+    // Hero
+    'hero.title': 'DOMENATION',
+    'hero.subtitle': 'DEATHCLOCK',
+    'hero.tagline': 'LUTE, SAQUEIE E SOBREVIVA AO PULSO',
+    'hero.description': 'Cuidado! O Pulso está vindo! Pegue todo o saque que puder e corra para se abrigar no domo mais próximo antes que o pulso atinja, lutando contra qualquer um que fique no seu caminho.',
+    'hero.cta': 'REGISTRE-SE AGORA',
+    'hero.comingSoon': 'EM BREVE',
+    
+    // Features
+    'features.title': 'CARACTERÍSTICAS PRINCIPAIS',
+    'features.subtitle': 'Você está pronto para dominar este novo conceito de shooter?',
+    'features.description': 'Lute sozinho ou junte-se a uma equipe no campo de batalha, suas habilidades e estratégia serão decisivas para alcançar a glória no Domenation.',
+    
+    'features.domes.title': 'DOMOS',
+    'features.domes.description': 'Encontre um Domo e refugie-se do pulso dentro dele',
+    
+    'features.loot.title': 'ACAMPAMENTOS DE SAQUE',
+    'features.loot.description': 'Elimine criaturas hostis que guardam baús para desbloquear saques valiosos',
+    
+    'features.competition.title': 'COMPETIÇÃO',
+    'features.competition.description': 'Compita contra outros jogadores para alcançar a glória e ganhar recompensas exclusivas',
+    
+    // About
+    'about.title': 'SOBRE O JOGO',
+    'about.description': 'Cuidado! O Pulso está vindo! Pegue todo o saque que puder e corra para se abrigar no domo mais próximo antes que o pulso atinja. Cuidado, guerreiros de todo o mundo vieram para reivindicar a vitória e obter as recompensas dos Jogos do Domo.',
+    
+    // Footer
+    'footer.developer': 'Desenvolvido por',
+    'footer.rights': '© 2024 Blackmouth Games. Todos os direitos reservados.',
+    'footer.followUs': 'Siga-nos',
   },
 };
