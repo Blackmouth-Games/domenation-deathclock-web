@@ -6,7 +6,7 @@ import sticker2 from '@/assets/sticker-2.png';
 import sticker3 from '@/assets/sticker-3.png';
 
 const HeroSection: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef<HTMLElement>(null);
@@ -72,29 +72,32 @@ const HeroSection: React.FC = () => {
       {/* Floating stickers with parallax - hidden on small mobile */}
       <img
         src={sticker1}
-        alt=""
+        alt="Domenation game character sticker"
         className="absolute left-2 sm:left-4 lg:left-20 top-[15%] sm:top-1/4 w-20 sm:w-32 lg:w-48 opacity-70 sm:opacity-90 z-20 animate-float hidden xs:block"
         style={{
           transform: `translate(${mousePos.x * -2}px, ${mousePos.y * -2}px)`,
         }}
+        loading="lazy"
       />
       <img
         src={sticker2}
-        alt=""
+        alt="Domenation game weapon sticker"
         className="absolute right-2 sm:right-4 lg:right-20 bottom-[15%] sm:bottom-1/4 w-20 sm:w-32 lg:w-48 opacity-70 sm:opacity-90 z-20 animate-float hidden xs:block"
         style={{
           transform: `translate(${mousePos.x * 2}px, ${mousePos.y * 2}px)`,
           animationDelay: '1s',
         }}
+        loading="lazy"
       />
       <img
         src={sticker3}
-        alt=""
+        alt="Domenation game action sticker"
         className="absolute right-4 sm:right-8 lg:right-32 top-[20%] sm:top-[15%] w-16 sm:w-24 lg:w-36 opacity-70 sm:opacity-90 z-20 animate-float hidden xs:block"
         style={{
           transform: `translate(${mousePos.x * -1.5}px, ${mousePos.y * 1.5}px)`,
           animationDelay: '2s',
         }}
+        loading="lazy"
       />
 
       {/* Content */}
@@ -109,7 +112,7 @@ const HeroSection: React.FC = () => {
           <span className="text-accent font-bold tracking-widest text-xs sm:text-sm">{t('hero.comingSoon')}</span>
         </div>
 
-        {/* Logo */}
+        {/* Logo with H1 for SEO */}
         <div
           className={`mb-4 sm:mb-8 transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
@@ -118,21 +121,23 @@ const HeroSection: React.FC = () => {
             transform: `translate(${mousePos.x}px, ${mousePos.y}px)`,
           }}
         >
+          <h1 className="sr-only">Domenation - {t('hero.tagline')}</h1>
           <img
             src={deathclockLogo}
-            alt="Domenation Deathclock"
+            alt="Domenation Deathclock - Frantic multiplayer shooter game logo"
             className="w-full max-w-xs sm:max-w-lg md:max-w-2xl mx-auto drop-shadow-2xl"
           />
         </div>
 
         {/* Tagline */}
-        <h2
+        <p
+          role="doc-subtitle"
           className={`text-xl sm:text-2xl md:text-4xl font-bold mb-4 sm:mb-6 glow-cyan transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           <span className="text-primary">{t('hero.tagline')}</span>
-        </h2>
+        </p>
 
         {/* Description */}
         <p

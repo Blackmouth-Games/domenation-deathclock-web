@@ -5,22 +5,30 @@ import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 
 const Index: React.FC = () => {
   return (
     <LanguageProvider>
+      <SEOHead />
       <div className="min-h-screen bg-background overflow-x-hidden">
         {/* Noise overlay */}
-        <div className="noise-overlay" />
+        <div className="noise-overlay" aria-hidden="true" />
         
         {/* Navigation */}
-        <Navbar />
+        <header>
+          <Navbar />
+        </header>
         
         {/* Main content */}
-        <main>
+        <main id="main-content" role="main">
           <HeroSection />
-          <FeaturesSection />
-          <AboutSection />
+          <section aria-labelledby="features-title">
+            <FeaturesSection />
+          </section>
+          <section aria-labelledby="about-title">
+            <AboutSection />
+          </section>
         </main>
         
         {/* Footer */}
