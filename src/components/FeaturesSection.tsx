@@ -130,7 +130,7 @@ const FeaturesSection: React.FC = () => {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
           }`}
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6" id="features-title">
             <span className="text-foreground">{t('features.title').split(' ')[0]}</span>{' '}
             <span className="text-primary glow-cyan">{t('features.title').split(' ').slice(1).join(' ')}</span>
           </h2>

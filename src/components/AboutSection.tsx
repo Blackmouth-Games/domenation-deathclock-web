@@ -58,10 +58,11 @@ const AboutSection: React.FC = () => {
                 <img
                   key={index}
                   src={img}
-                  alt={`Gameplay ${index + 1}`}
+                  alt={`Domenation gameplay screenshot ${index + 1} - 3v3 multiplayer shooter action`}
                   className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
                     activeImage === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
                   }`}
+                  loading="lazy"
                 />
               ))}
               
@@ -93,7 +94,7 @@ const AboutSection: React.FC = () => {
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8" id="about-title">
               <span className="text-accent glow-red">{t('about.title')}</span>
             </h2>
 
