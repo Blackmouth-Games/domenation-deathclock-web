@@ -3,6 +3,10 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import gameplay1 from '@/assets/gameplay-1.png';
 import gameplay2 from '@/assets/gameplay-2.png';
 import environment from '@/assets/environment.png';
+import gameplay3 from '@/assets/gameplay-3.png';
+import gameplay4 from '@/assets/gameplay-4.png';
+import gameplay5 from '@/assets/gameplay-5.png';
+import gameplay6 from '@/assets/gameplay-6.png';
 
 const AboutSection: React.FC = () => {
   const { t } = useLanguage();
@@ -10,7 +14,7 @@ const AboutSection: React.FC = () => {
   const [activeImage, setActiveImage] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
 
-  const images = [gameplay1, gameplay2, environment];
+  const images = [gameplay1, gameplay2, environment, gameplay3, gameplay4, gameplay5, gameplay6];
 
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -131,30 +131,6 @@ const HeroSection: React.FC = () => {
           {t('hero.description')}
         </p>
 
-        {/* CTA Button */}
-        <a
-          href="https://domenation.io/signup"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`group relative inline-flex items-center justify-center px-10 py-4 text-lg font-bold tracking-wider overflow-hidden transition-all duration-1000 delay-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          {/* Button background */}
-          <span className="absolute inset-0 bg-gradient-to-r from-accent via-secondary to-primary opacity-100 group-hover:opacity-0 transition-opacity duration-300" />
-          <span className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          
-          {/* Glow effect */}
-          <span className="absolute inset-0 bg-gradient-to-r from-accent via-secondary to-primary blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
-          
-          {/* Border */}
-          <span className="absolute inset-0 border-2 border-foreground/20 group-hover:border-foreground/40 transition-colors" />
-          
-          {/* Text */}
-          <span className="relative z-10 text-background group-hover:text-background transition-colors">
-            {t('hero.cta')}
-          </span>
-        </a>
       </div>
 
       {/* Scroll indicator */}
