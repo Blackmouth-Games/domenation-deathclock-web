@@ -3,6 +3,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import deathclockLogo from '@/assets/deathclock.png';
 import sticker1 from '@/assets/sticker-1.png';
 import sticker2 from '@/assets/sticker-2.png';
+import sticker3 from '@/assets/sticker-3.png';
 
 const HeroSection: React.FC = () => {
   const { t } = useLanguage();
@@ -84,6 +85,15 @@ const HeroSection: React.FC = () => {
         style={{
           transform: `translate(${mousePos.x * 2}px, ${mousePos.y * 2}px)`,
           animationDelay: '1s',
+        }}
+      />
+      <img
+        src={sticker3}
+        alt=""
+        className="absolute right-4 sm:right-8 lg:right-32 top-[20%] sm:top-[15%] w-16 sm:w-24 lg:w-36 opacity-70 sm:opacity-90 z-20 animate-float hidden xs:block"
+        style={{
+          transform: `translate(${mousePos.x * -1.5}px, ${mousePos.y * 1.5}px)`,
+          animationDelay: '2s',
         }}
       />
 
